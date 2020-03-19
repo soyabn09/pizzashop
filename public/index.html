@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Delivery App</title>
+    <link rel="stylesheet" type="text/css" href="/styles/inline.css" />
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/soyabn9/image/upload/c_scale/v1582996711/Pizza-Shop/pizza-delivery-icon.png"
+      type="image/x-icon"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Pizza Delivery App" />
+    <link
+      rel="apple-touch-icon"
+      href="https://res.cloudinary.com/soyabn9/image/upload/c_scale,h_512,w_512/v1582996711/Pizza-Shop/pizza-delivery-icon.png"
+    />
+    <meta name="description" content="Pizza Delivery App" />
+    <meta name="theme-color" content="#e50000" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>
+        Pizza Delivery
+      </h1>
+      <button id="Install" aria-label="Install" hidden>
+        <ion-icon name="arrow-down-circle-sharp" size="large"></ion-icon>
+      </button>
+      <button id="Refresh" aria-label="Refresh">
+        <ion-icon name="refresh-circle-sharp" size="large"></ion-icon>
+      </button>
+    </header>
+
+    <main class="main">
+      <div id="about-us" class="card">
+        <h2>About Us</h2>
+        <p>
+          We have been serving our pizza's since the 1980's and all of our
+          customers have always been returning to us. We have always thought
+          about our customers first and so that they feel like they are in
+          paradise when ordering from us.
+        </p>
+      </div>
+
+      <div id="cart"></div>
+
+      <div id="menu" class="card">
+        <h2>Menu:</h2>
+        <h3>Pizza Selection:</h3>
+        <div class="grid-container1">
+          <div>
+            <img
+              src="https://res.cloudinary.com/soyabn9/image/upload/c_scale,h_200,w_200/v1582994813/Pizza-Shop/four-cheese-pizza.png"
+              alt="Four Cheese Pizza"
+            />
+            <p>Four Cheese Pizza</p>
+            <p>Medium - £9.50</p>
+            <label for="item1quantity"></label
+            ><input type="number" id="item1quantity" /><br />
+            <button type="button" onclick="addCheese()">Add to my order</button
+            ><br /><br />
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/soyabn9/image/upload/c_scale,h_200,w_200/v1583072133/Pizza-Shop/pepperoni-pizza.png"
+              alt="Pepperoni Pizza"
+            />
+            <p>Pepperoni Pizza</p>
+            <p>Medium - £13.00</p>
+            <label for="item2quantity"></label
+            ><input type="number" id="item2quantity" /><br />
+            <button type="button" onclick="addPepperoni()">
+              Add to my order</button
+            ><br /><br />
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/soyabn9/image/upload/c_scale,h_200,w_200/v1583020242/Pizza-Shop/fish-catch-pizza.png"
+              alt="Fish Catch Pizza"
+            />
+            <p>Fish Catch Pizza</p>
+            <p>Medium - £12.50</p>
+            <label for="item3quantity"></label
+            ><input type="number" id="item3quantity" /><br />
+            <button type="button" onclick="addFishcatch()">
+              Add to my order</button
+            ><br /><br />
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/soyabn9/image/upload/c_scale,h_200,w_200/v1583088073/Pizza-Shop/vegetarian-pizza.png"
+              alt="Vegetarian Pizza"
+            />
+            <p>Vegetarian Pizza</p>
+            <p>Medium - £11.50</p>
+            <label for="item4quantity"></label
+            ><input type="number" id="item4quantity" /><br />
+            <button type="button" onclick="addVegeterian()">
+              Add to my order</button
+            ><br /><br />
+          </div>
+        </div>
+        <h3>Extras:</h3>
+        <div class="grid-container2">
+          <div>
+            <img
+              src="https://res.cloudinary.com/soyabn9/image/upload/c_scale,h_200,w_200/v1583088557/Pizza-Shop/caesar-salad.png"
+              alt="Caesar Salad"
+            />
+            <p>Caesar Salad</p>
+            <p>£4.95</p>
+            <label for="item5quantity"></label
+            ><input type="number" id="item5quantity" /><br />
+            <button type="button" onclick="addCaesarSalad()">
+              Add to my order</button
+            ><br /><br />
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/soyabn9/image/upload/c_scale,h_200,w_200/v1583088904/Pizza-Shop/rustic-chips.png"
+              alt="Rustic Chips"
+            />
+            <p>Rustic Chips</p>
+            <p>£3.95</p>
+            <label for="item6quantity"></label
+            ><input type="number" id="item6quantity" /><br />
+            <button type="button" onclick="addRusticChips()">
+              Add to my order</button
+            ><br /><br />
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/soyabn9/image/upload/c_scale,h_200,w_200/v1583089155/Pizza-Shop/wild-garlic-bread.png"
+              alt="Wild Garlic Bread"
+            />
+            <p>Wild Garlic Bread</p>
+            <p>£3.75</p>
+            <label for="item7quantity"></label
+            ><input type="number" id="item7quantity" /><br />
+            <button type="button" onclick="addWildgarlicbread()">
+              Add to my order</button
+            ><br /><br />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/scripts/install.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js").then(reg => {
+            console.log("Service worker registered.", reg);
+          });
+        });
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
+</html>
